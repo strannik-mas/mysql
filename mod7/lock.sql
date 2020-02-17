@@ -2,16 +2,16 @@
 CREATE DATABASE IF NOT EXISTS module7;
 USE module7;
 -- Копия таблиц для демонстрации
-CREATE TABLE courses SELECT * FROM course.courses;
-CREATE TABLE teachers SELECT * FROM course.teachers;
-CREATE TABLE lessons SELECT * FROM course.lessons;
+CREATE TABLE courses SELECT * FROM courses.courses;
+CREATE TABLE teachers SELECT * FROM courses.teachers;
+CREATE TABLE lessons SELECT * FROM courses.lessons;
 
 
 LOCK TABLES teachers READ;
 
 SELECT name FROM teachers;
 
-INSERT INTO teachers (id, name) VALUES (10, 'Новый преподаватель');
+INSERT INTO teachers (id, name) VALUES (10, 'Новый преподаватель23');
 INSERT DELAYED INTO teachers (id, name) VALUES (10, 'Новый преподаватель');
 
 UNLOCK TABLES;

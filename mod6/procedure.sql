@@ -3,9 +3,9 @@ CREATE DATABASE IF NOT EXISTS module6;
 USE module6;
 
 -- Копия таблиц для де монстрации
-CREATE TABLE courses SELECT * FROM course.courses;
-CREATE TABLE teachers SELECT * FROM course.teachers;
-CREATE TABLE lessons SELECT * FROM course.lessons;
+CREATE TABLE courses SELECT * FROM courses.courses;
+CREATE TABLE teachers SELECT * FROM courses.teachers;
+CREATE TABLE lessons SELECT * FROM courses.lessons;
 
 -- Создание процедуры
 DELIMITER |
